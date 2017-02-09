@@ -1,89 +1,139 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+	<meta name="renderer" content="webkit">
+	<title></title>
+	<link rel="stylesheet" href="<?php echo site_url('assets/css/css/style.css'); ?>" />
+	<link rel="stylesheet" href="<?php echo site_url('assets/font-awesome/css/font-awesome.min.css'); ?>" />
+	<script type="text/javascript" src="<?php echo site_url('assets/js/jquery-1.10.2.min.js'); ?>"></script>
+	<script type="text/javascript" src="<?php echo site_url('assets/js/jquery.SuperSlide.2.1.1.js'); ?>"></script>
 
-	<style type="text/css">
 
-	::selection { background-color: #E13300; color: white; }
-	::-moz-selection { background-color: #E13300; color: white; }
-
-	body {
-		background-color: #fff;
-		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
-	}
-
-	a {
-		color: #003399;
-		background-color: transparent;
-		font-weight: normal;
-	}
-
-	h1 {
-		color: #444;
-		background-color: transparent;
-		border-bottom: 1px solid #D0D0D0;
-		font-size: 19px;
-		font-weight: normal;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
-	}
-
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
-
-	#body {
-		margin: 0 15px 0 15px;
-	}
-
-	p.footer {
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
-
-	#container {
-		margin: 10px;
-		border: 1px solid #D0D0D0;
-		box-shadow: 0 0 8px #D0D0D0;
-	}
-	</style>
 </head>
 <body>
+<div id="nav">
+	<div class="container">
+		<a class="logo" href="index.html"><img src="<?php echo site_url('assets/images/jc3.png'); ?>"/></a>
+		<div class="nav-right">
+			<p class="tel"><span><img src="images/tel.png"/></span>0755-<strong>8285 6666</strong></p>
+			<ul>
+				<li><a href="index.html" >首页</a></li>
+				<li class="hide">
+					<a href="#this">产品展示</a>
+					<ul class="dropDown">
+						<li><a href="#this">企业介绍</a></li>
+						<li><a href="#this">企业文化</a></li>
+						<li><a href="#this">企业实力</a></li>
+					</ul>
+				</li>
+				<li><a href="joinUs-about.html">招商加盟</a></li>
+				<li><a href="brandcenter.html">品牌中心</a></li>
+				<li><a href="latest.html">最新动态</a></li>
+				<li><a href="#this">关于我们</a></li>
+			</ul>
+		</div>
 
-<div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
-
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
 	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
 </div>
 
+<div id="content">
+	<div class="container pos-re">
+
+		<div class="banner">
+			<div id="slideBox" class="slideBox">
+				<div class="hd">
+					<ul>
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+					</ul>
+				</div>
+				<div class="bd">
+					<ul>
+						<li>
+							<a href="#this"><img src="images/jc13.png"/></a>
+						</li>
+						<li>
+							<a href="#this"><img src="images/jc13.png"/></a>
+						</li>
+						<li>
+							<a href="#this"><img src="images/jc13.png"/></a>
+						</li>
+
+					</ul>
+				</div>
+
+				<!--下面是前/后按钮代码，如果不需要删除即可
+					<a class="prev" href="javascript:void(0)"></a>
+					<a class="next" href="javascript:void(0)"></a>-->
+
+			</div>
+			<script>
+				jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
+			</script>
+
+		</div>
+
+		<div class="item">
+			<div class="item01">
+				<img src="images/jc4.png"/>
+				<div class="imgtxt">
+					<a href="#this">
+						<h4>汇和集团</h4>
+						<p class="lh-20">汇和建材有限公司成立于2011年，注册资本1800万元，集团总部位于香港，并分别在深圳、佛山和荆州等地设立分公司……</p>
+					</a>
+
+				</div>
+			</div>
+
+			<div class="item02">
+				<img src="images/jc5.png"/>
+				<div class="imgtxt">
+					<h4>产品理念</h4>
+					<a class="btnbg" href="#this">6S设计理念</a>
+					<a class="btnbg" href="#this">6H品质保障</a>
+				</div>
+			</div>
+
+			<div class="item03">
+				<div class="imgtxt">
+					<h4 class="newtit">最新动态 <a class="more" href="#this">+ 更多</a></h4>
+					<ul class="newList">
+						<li><span class="dot"></span><a  class="text-overflow" href="#this">中节能和中建材受惠两会材受惠两会 ”——</a></li>
+						<li><span class="dot"></span><a class="text-overflow" href="#this">中节能和中建材受惠两会”——</a></li>
+						<li><span class="dot"></span><a class="text-overflow" href="#this">中节能和中建材受惠两会”——</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+</div>
+
+<div id="footer">
+	<div class="container">
+		<div class="footer_menu">
+			<ul>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="brandcenter-contactus.html">联系我们</a></li>
+				<li><a href="#this">DIY设计</a></li>
+				<li><a href="#this">常见问题</a></li>
+				<li><a href="#this">售后服务</a></li>
+			</ul>
+			<p>汇和建材版权所有 2011-2015 &copy 鄂ICP备16016680号-1</p>
+			<img  class="footer-ewm" src="images/ewm.png"/>
+		</div>
+
+	</div>
+
+
+</div>
 </body>
 </html>
